@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25:00 - Time to work!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jQuery.js"></script>
+  </head>
+  <body style="background-color: rgb(235, 89, 86);">
+    <div class="main">
+      <div class="header">
+        <span class="heading">Pomodoro Clock</span>
+        <button class="btn settings">
+          <span class="icon"><img src="settings-icon.svg" alt="icon"/></span>
+          <span class="btn-txt">Settings</span>
+        </button>
+        <hr class="rule" />
+      </div>
+      <div class="container">
+        <div class="btn-list">
+          <button class="bttn pom-active-btn" id="pom">Pomodoro</button>
+          <button class="bttn" id="sb">Short break</button>
+          <button class="bttn" id="lb">Long break</button>
+        </div>
+        <div class="clock">
+          <span id="minutes">25</span>
+          <span id="separator">:</span>
+          <span id="seconds">00</span>
+          <br />
+        </div>
+        <div class="bottom">
+          <button class="start" id="start-stop">START</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-heading">Timer Settings</span>
+          <button class="btn-close"><img src="close-icon.svg" alt="Close"></button>
+          <hr class="modal-rule">
+        </div>
+        <div class="modal-body">
+          <div style="text-align: left;">Timer (in minutes)</div>
+          <div class="timer-settings">
+            <div class="inputs">
+              <label for="pom-edit" class="labels">Pomodoro</label>
+              <input type="number" id="pom-edit" value="25" min="1" max="59"/>
+            </div>
+            <div class="inputs">
+              <label for="sb-edit" class="labels">Short Break</label>
+              <input type="number" id="sb-edit" value="5" min="1" max="59"/>
+            </div>
+            <div class="inputs">
+              <label for="lb-edit" class="labels">Long Break</label>
+              <input type="number" id="lb-edit" value="15" min="1" max="59"/>
+            </div>
+          </div>
+          <div class="lb-settings">
+            <label for="lb-interval" class="lb-label">Long Break Interval</label>
+            <input type="number" id="lb-interval" value="4" min="1" max="4"/>
+          </div>
+        </div>
+        <div class="modal-bottom">
+          <button class="btn-update" name="update">Update</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
