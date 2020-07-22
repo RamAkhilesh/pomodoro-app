@@ -7,7 +7,7 @@ $(document).ready(function() {
     work_count = 0,
     lb_interval = 4;
   var audioElement = document.createElement('audio');
-  audioElement.setAttribute('src', 'alarm-audio.mp3');
+  audioElement.setAttribute('src', 'assets/alarm-audio.mp3');
 
   function checkTime(t) {
     if (t < 10) return "0" + t;
